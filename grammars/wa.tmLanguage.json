@@ -184,10 +184,6 @@
             {
               "match": "([_a-zA-Z][_a-zA-Z0-9]*)(?=\\s*\\()",
               "name": "entity.name.function.wa"
-            },
-            {
-              "match": "([\\u4e00-\\u9fa5]+)(?=\\s*\\()",
-              "name": "entity.name.function.wa"
             }
           ]
         },
