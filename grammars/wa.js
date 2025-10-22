@@ -10,6 +10,7 @@ export default function(hljs) {
     "true",
     "false",
     "iota",
+    "this",
     "nil"
   ];
   const BUILT_INS = [
@@ -58,7 +59,8 @@ export default function(hljs) {
     "int",
     "uint",
     "uintptr",
-    "rune"
+    "rune",
+    "any"
   ];
   const KWS = [
     "break",

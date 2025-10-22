@@ -43,7 +43,7 @@
         {
           "comment": "Types",
           "name": "storage.type.wa",
-          "match": "\\b(bool|string|error|map)\\b"
+          "match": "\\b(bool|string|error|map|iota|any|this)\\b"
         },
         {
           "comment": "Singed Ints",
