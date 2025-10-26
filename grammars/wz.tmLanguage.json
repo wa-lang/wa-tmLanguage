@@ -170,7 +170,7 @@
             },
             {
               "name": "keyword.default.wz",
-              "match": "\\b(常数|函数)\\b"
+              "match": "\\b(常量|函数)\\b"
             }
           ]
         },

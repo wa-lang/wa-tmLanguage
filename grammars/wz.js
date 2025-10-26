@@ -1,86 +1,88 @@
 /*
-Language: Wa
-Description: Wa(凹语言) language (wa-lang). For info about language
+Language: Wz
+Description: Wz(凹语言中文版) language (wz-lang). For info about language
 Website: http://wa-lang.org/
 Category: common, system
 */
 
 export default function(hljs) {
   const LITERALS = [
-    "true",
-    "false",
-    "iota",
-    "this",
-    "nil"
+    "真",
+    "假",
+    "嘀嗒",
+    "我的",
+    "空"
   ];
   const BUILT_INS = [
-    "append",
-    "cap",
-    "complex",
-    "copy",
-    "imag",
-    "len",
-    "make",
-    "new",
-    "panic",
-    "print",
-    "println",
-    "real",
-    "delete"
+    "追加",
+    "容量",
+    "复数",
+    "拷贝",
+    "虚部",
+    "长度",
+    "构建",
+    "新建",
+    "崩溃",
+    "打印",
+    "输出",
+    "实部",
+    "删除"
   ];
   const TYPES = [
-    "bool",
-    "byte",
-    "complex64",
-    "complex128",
-    "error",
-    "f32",
-    "f64",
-    "i8",
-    "i16",
-    "i32",
-    "i64",
-    "u8",
-    "u16",
-    "u32",
-    "u64",
-    "float32",
-    "float64",
-    "int8",
-    "int16",
-    "int32",
-    "int64",
-    "string",
-    "uint8",
-    "uint16",
-    "uint32",
-    "uint64",
-    "int",
-    "uint",
-    "uintptr",
-    "rune",
-    "any"
+    "布尔",
+    "字节",
+    "单复",
+    "双复",
+    "错误",
+    "单精",
+    "双精",
+    "微整型",
+    "短整型",
+    "普整型",
+    "长整型",
+    "微正整",
+    "短正整",
+    "普正整",
+    "长正整",
+    "字串",
+    "整型",
+    "正整",
+    "地址型",
+    "符文",
+    "皮囊"
   ];
   const KWS = [
-    "break",
-    "case",
-    "const",
-    "continue",
-    "default",
-    "defer",
-    "else",
-    "for",
-    "func",
-    "global",
-    "if",
-    "import",
-    "interface",
-    "map",
-    "range",
-    "return",
-    "struct",
-    "switch",
-    "type"
+    "引入",
+
+    "常量",
+    "全局",
+    "类型",
+    "函数",
+
+    "结构",
+    "字典",
+    "接口",
+
+    "设定",
+
+    "如果",
+    "或者",
+    "否则",
+
+    "找辙",
+    "有辙",
+    "没辙",
+
+    "循环",
+    "迭代",
+    "继续",
+    "跳出",
+
+    "押后",
+    "返回",
+
+    "区块",
+    "完毕"
   ];
   const KEYWORDS = {
     keyword: KWS,
@@ -89,12 +91,13 @@ export default function(hljs) {
     built_in: BUILT_INS
   };
   return {
-    name: 'Wa',
-    aliases: [ 'wa-lang' ],
+    name: 'Wz',
+    aliases: [ 'wz-lang' ],
     keywords: KEYWORDS,
     illegal: '</',
     contains: [
       hljs.COMMENT('#', '$'),
+      hljs.COMMENT('注:', '$'),
       hljs.C_LINE_COMMENT_MODE,
       hljs.C_BLOCK_COMMENT_MODE,
       {
@@ -137,7 +140,7 @@ export default function(hljs) {
       },
       {
         className: 'function',
-        beginKeywords: 'func',
+        beginKeywords: '函数',
         end: '\\s*(\\{|$)',
         excludeEnd: true,
         contains: [
